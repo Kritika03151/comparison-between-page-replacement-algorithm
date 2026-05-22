@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Replacement Visualizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📄 Page Replacement Algorithm Comparison</h1>
+
+        <form method="POST" action="/result">
+            <label>Enter Page Reference String:</label>
+            <input type="text" name="pages" required placeholder="e.g., 1 2 3 2 4 1">
+
+            <label>Enter Number of Frames:</label>
+            <input type="number" name="capacity" required min="1">
+
+            <button type="submit">Compare</button>
+        </form>
+    </div>
+</body>
+</html>

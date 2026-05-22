@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparison Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Comparison Results</h1>
+        <div class="result">
+            <p><strong>Pages:</strong> {{ result.pages }}</p>
+            <p><strong>Frames:</strong> {{ result.capacity }}</p>
+            <p><strong>FIFO Page Faults:</strong> {{ result.fifo_faults }}</p>
+            <p><strong>LRU Page Faults:</strong> {{ result.lru_faults }}</p>
+            <p><strong>Better Algorithm:</strong> {{ result.better }}</p>
+            <img src="{{ url_for('static', filename='chart.png') }}" alt="Comparison Chart" class="chart-img">
+        </div>
+        <a href="/" class="btn">Back</a>
+    </div>
+</body>
+</html>
